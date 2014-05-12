@@ -3,7 +3,7 @@
 Original code by [hubeza][0] on [Stackoverflow][1]
 
 ### Basic Usage
-Draws an IEnumerable<T> as a table using the following code:
+Format an IEnumerable<T> as a table using `ToStringTable`:
 
 ````csharp
 var users = new List<User>
