@@ -35,14 +35,18 @@ var table = users.ToStringTable(
 
 Console.WriteLine(table);
 
-/* Prints
+````
+
+````
 
  | FirstName | LastName | DateTime                | NullableDateTime        | IntValue | NullableIntValue | 
  |--------------------------------------------------------------------------------------------------------| 
  | null      | null     | 1/01/0001 12:00:00 a.m. | null                    | 0        | null             | 
  | Jake      | Scott    | 12/05/2014 8:46:38 p.m. | 12/05/2014 8:46:38 p.m. | 99       | 999              | 
 
-*/
+````
+
+````csharp
 
 var customTable = users.ToStringTable(new[] { "First Name", "Last Name" },
     u => u.FirstName,
@@ -51,17 +55,17 @@ var customTable = users.ToStringTable(new[] { "First Name", "Last Name" },
 
 Console.WriteLine(customTable);
 
-/* Prints
+````
+
+````
 
  | First Name | Last Name | 
  |------------------------| 
  | null       | null      | 
  | Jake       | Scott     | 
  
-*/
 
 ````
-
 
 [0]:http://stackoverflow.com/users/133665/hubeza
 [1]:http://stackoverflow.com/a/19353995/52360
