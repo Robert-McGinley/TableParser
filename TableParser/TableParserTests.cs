@@ -53,6 +53,15 @@
             );
 
             Console.WriteLine(actual);
+
+            var guids = new List<Guid>
+            {
+                Guid.NewGuid(), 
+                Guid.NewGuid()
+            };
+
+            var guidTable = guids.ToStringTable(new[] { "UserId" }, g => g);
+            Console.WriteLine(guidTable);
         }
 
         [Test]
