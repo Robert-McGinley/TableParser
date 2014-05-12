@@ -1,8 +1,10 @@
-#Table Parser
+# Table Parser
 
 Original code by [hubeza][0] on [Stackoverflow][1]
 
 Draws an IEnumerable<T> as a table like this:
+
+### Basic Usage
 
 ````csharp
 
@@ -46,6 +48,8 @@ Console.WriteLine(table);
 
 ````
 
+### Custom Column Headers
+
 ````csharp
 
 var customTable = users.ToStringTable(new[] { "First Name", "Last Name" },
@@ -66,6 +70,7 @@ Console.WriteLine(customTable);
  
 
 ````
+### Simple List of Guids
 
 ````csharp
 
