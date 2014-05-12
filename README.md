@@ -2,9 +2,8 @@
 
 Original code by [hubeza][0] on [Stackoverflow][1]
 
-Draws an IEnumerable<T> as a table like this:
-
 ### Basic Usage
+Draws an IEnumerable<T> as a table using the following code:
 
 ````csharp
 var users = new List<User>
