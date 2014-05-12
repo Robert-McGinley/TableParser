@@ -67,6 +67,29 @@ Console.WriteLine(customTable);
 
 ````
 
+````csharp
+
+var guids = new List<Guid>
+{
+    Guid.NewGuid(), 
+    Guid.NewGuid()
+};
+
+var guidTable = guids.ToStringTable(new[] {"UserUd"}, g => g);
+Console.WriteLine(guidTable);
+
+````
+
+````
+
+ | UserUd                               | 
+ |--------------------------------------| 
+ | c98c46f6-5e7a-421e-a71d-a47f09c4eb87 | 
+ | 4522d0f0-20b2-48db-83b2-1b41952999d6 | 
+ 
+```` 
+
+
 [0]:http://stackoverflow.com/users/133665/hubeza
 [1]:http://stackoverflow.com/a/19353995/52360
 
