@@ -4,16 +4,6 @@ Original code by [hubeza][0] on [Stackoverflow][1]
 
 Draws an IEnumerable<T> as a table like this:
 
-````
-
- | FirstName | LastName | DateTime                | NullableDateTime        | IntValue | NullableIntValue | 
- |--------------------------------------------------------------------------------------------------------| 
- | null      | null     | 1/01/0001 12:00:00 a.m. | null                    | 0        | null             | 
- | Jake      | Scott    | 12/05/2014 8:46:38 p.m. | 12/05/2014 8:46:38 p.m. | 99       | 999              | 
-
-````
-
-
 ````csharp
 
 var users = new List<User>
@@ -44,6 +34,32 @@ var table = users.ToStringTable(
 );
 
 Console.WriteLine(table);
+
+/* Prints
+
+ | FirstName | LastName | DateTime                | NullableDateTime        | IntValue | NullableIntValue | 
+ |--------------------------------------------------------------------------------------------------------| 
+ | null      | null     | 1/01/0001 12:00:00 a.m. | null                    | 0        | null             | 
+ | Jake      | Scott    | 12/05/2014 8:46:38 p.m. | 12/05/2014 8:46:38 p.m. | 99       | 999              | 
+
+*/
+
+var customTable = users.ToStringTable(new[] { "First Name", "Last Name" },
+    u => u.FirstName,
+    u => u.LastName
+);
+
+Console.WriteLine(customTable);
+
+/* Prints
+
+ | First Name | Last Name | 
+ |------------------------| 
+ | null       | null      | 
+ | Jake       | Scott     | 
+ 
+*/
+
 ````
 
 
