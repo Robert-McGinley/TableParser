@@ -75,14 +75,14 @@ var guids = new List<Guid>
     Guid.NewGuid()
 };
 
-var guidTable = guids.ToStringTable(new[] {"UserUd"}, g => g);
+var guidTable = guids.ToStringTable(new[] {"UserId"}, g => g);
 Console.WriteLine(guidTable);
 
 ````
 
 ````
 
- | UserUd                               | 
+ | UserId                               | 
  |--------------------------------------| 
  | c98c46f6-5e7a-421e-a71d-a47f09c4eb87 | 
  | 4522d0f0-20b2-48db-83b2-1b41952999d6 | 
